@@ -8,8 +8,9 @@ repository = "https://github.com/ccnmagnoo/eco-enlace-client"
 license = "MIT OR Apache-2.0"
 keywords = ["yew", "client","renewable","services","solar"]
 categories = ["directory", "services", "web-programming"]
+authors = ["Carlos Campos <ccamposn@minenergia.cl>"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
+tokio = "1.28.1"
 yew = { version="0.20", features=["csr"] }
-tokio = { version="1",features=["full"]}
