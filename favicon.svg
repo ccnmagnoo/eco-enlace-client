@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="aliceblue">
+
+    <rect width="100%" height="100%" stroke="aquamarine" fill="transparent">
+    </rect>
+    <text x="10" y="13" font-family="arial" fill="#14eeee" text-anchor="middle">
+        e
+    </text>
+    <text x="14" y="13" font-family="arial" rotate="" fill="white" text-anchor="middle">
+        e
+    </text>
+</svg>

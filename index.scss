@@ -1,35 +1,116 @@
+* {
+  box-sizing: border-box;
+  // border: 1px white dotted;
+}
+
 html,
 body {
   height: 100%;
   margin: 0;
+  padding: 0;
+}
+
+$primary-color: #4a4974;
+$secondary-color: #14eeee;
+$background-color: linear-gradient(135deg, $primary-color 0%, $secondary-color 200%);
+$topbar-height: 100px;
+$small-screen: 768px;
+$medium-screen: 1000px;
+$font-styled: 'Poiret One', cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+  'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$font-regular: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+  'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+h1,
+h2,
+h3 {
+  font-family: $font-styled;
 }
 
 body {
-  align-items: center;
   display: flex;
-  justify-content: center;
-
-  background: linear-gradient(to bottom right, #444444, #009a5b);
-  font-size: 1.5rem;
+  flex-direction: column;
+  background: $background-color;
+  font-size: medium;
+  font-family: $font-regular;
+  color: white;
+  & * {
+    padding: 1rem;
+  }
+  @media screen and (max-width: $small-screen) {
+    font-size: small;
+  }
 }
 
-main {
-  color: #fff6d5;
-  font-family: sans-serif;
-  text-align: center;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  flex: 0 0 3rem;
 }
 
-.logo {
-  height: 20em;
+.central-container {
+  display: flex;
+  flex: 1 1 800px;
+  flex-direction: row;
+  padding: 0 2rem;
+  border-radius: unset;
+  gap: 0.2rem; //lines between menu and main body
+
+  aside {
+    flex: 0 1 200px;
+    background-color: rgb(white, 0.2);
+    @media screen and (max-width: $small-screen) {
+      display: none;
+    }
+    @media screen and (max-width: $medium-screen) {
+      flex: 0 1 120px;
+    }
+
+    &#primary {
+      border-radius: 1rem 0 0 1rem;
+      transition: background-color 0.2s ease-in-out;
+    }
+    &#secondary {
+      border-radius: 0 1rem 1rem 0;
+    }
+    &:hover {
+      background-color: rgb(white, 0.22);
+    }
+  }
+
+  main {
+    flex: 1;
+    background-color: rgb(white, 0.2);
+    border-radius: 0;
+    transition: all 0.5s ease-in-out;
+
+    @media screen and (max-width: $small-screen) {
+      border-radius: 1rem;
+    }
+  }
+}
+
+footer {
+  flex: 0 1 2rem;
+  display: flex;
+  padding: 0.5rem 2rem;
 }
 
 .heart:after {
-  content: "❤️";
-
-  font-size: 1.75em;
+  content: '🔥';
+  font-size: 3rem;
 }
 
-h1 + .subtitle {
-  display: block;
-  margin-top: -1em;
+#brand {
+  font-family: $font-styled;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: all 1s ease-in;
+
+  &:first-letter {
+    color: $secondary-color;
+    font-weight: 800;
+  }
 }
