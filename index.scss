@@ -96,6 +96,18 @@ footer {
   flex: 0 1 2rem;
   display: flex;
   padding: 0.5rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+
+  #energia_valpo_logo {
+    $logo_size: 60px;
+    width: $logo_size;
+    height: $logo_size;
+    mix-blend-mode: hard-light;
+    border: white solid 1px;
+    padding: 0;
+    border-radius: 100%;
+  }
 }
 
 .heart:after {
